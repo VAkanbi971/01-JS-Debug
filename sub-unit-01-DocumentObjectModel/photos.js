@@ -13,6 +13,7 @@
 /* global variables */
 var photoOrder = [1,2,3,4,5];
 
+
 /* shift all images one figure to the left, and change values in photoOrder array to match  */
 function rightArrow() {
    for (var i = 0; i < 5; i++) {
@@ -40,6 +41,17 @@ function leftArrow() {
 /* open center figure in separate window */
 function zoomFig() {
    
+}
+
+// Creating create event listeners function
+function createEventListeners() {
+   var leftArrow = document.getElementById("leftarrow");
+   if (leftarrow.addEventListener) {
+      leftarrow.addEventListener("click", leftArrow, false);
+   }
+   else if (leftarrow.attachEvent) {
+      leftarrow.attachEvent("onclick", leftArrow);
+   }
 }
 
 /* create event listeners and populate image elements */
